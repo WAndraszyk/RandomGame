@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RandomGame</string>
+    <string name="guess_the_number">GUESS THE NUMBER</string>
+    <string name="type_your_guess">Type your guess:</string>
+    <string name="guess">Guess!</string>
+    <string name="new_game">New game</string>
+    <string name="guesses_so_far">Guesses so far: 0</string>
+    <string name="score">Score: 0</string>
+    <string name="reset_score">reset score</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
