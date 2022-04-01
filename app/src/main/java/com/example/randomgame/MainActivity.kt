@@ -13,6 +13,7 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_main)
         val newGameButton = findViewById<Button>(R.id.new_game_button)
         val restartButton = findViewById<Button>(R.id.restart_button)
