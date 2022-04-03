@@ -15,7 +15,7 @@ class SplashScreen : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashScreen, HomeActivity::class.java)
+            val intent = Intent(this@SplashScreen, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
