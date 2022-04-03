@@ -16,18 +16,11 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         supportActionBar?.hide()
         val newGameButton = findViewById<Button>(R.id.new_game_button)
-        val restartButton = findViewById<Button>(R.id.restart_button)
 
         newGame()
 
         newGameButton.setOnClickListener {
             newGame()
-        }
-
-        restartButton.setOnClickListener {
-            setScore(0)
-            val scoreView = findViewById<TextView>(R.id.scoreView)
-            scoreView.setText("Score: " + getScore().toString())
         }
     }
 
