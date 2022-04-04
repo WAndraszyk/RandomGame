@@ -11,11 +11,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val loginButton = findViewById<Button>(R.id.logIn)
-        val emailField = findViewById<EditText>(R.id.email)
+        val nickField = findViewById<EditText>(R.id.nick)
         val passwordField = findViewById<EditText>(R.id.password)
 
         loginButton.setOnClickListener {
-            val email = emailField.text.toString()
+            val nick = nickField.text.toString()
             val password = passwordField.text.toString()
         }
     }

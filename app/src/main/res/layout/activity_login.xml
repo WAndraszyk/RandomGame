@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/nick"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="65dp"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="65dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/emailHint"
+        android:hint="@string/nickHint"
         android:inputType="textEmailAddress"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/nick" />
 
     <Button
         android:id="@+id/logIn"
