@@ -14,11 +14,19 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val loginButton = findViewById<Button>(R.id.logIn)
+        val signUpButton = findViewById<Button>(R.id.signUp)
         val nickField = findViewById<EditText>(R.id.nick)
         val passwordField = findViewById<EditText>(R.id.password)
         val rankingButton = findViewById<Button>(R.id.rankingButton)
 
         loginButton.setOnClickListener {
+            val nick = nickField.text.toString()
+            val password = passwordField.text.toString()
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        signUpButton.setOnClickListener {
             val nick = nickField.text.toString()
             val password = passwordField.text.toString()
             val intent = Intent(this@LoginActivity, HomeActivity::class.java)
