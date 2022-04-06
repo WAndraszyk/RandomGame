@@ -7,17 +7,17 @@ import android.database.sqlite.SQLiteOpenHelper
 class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private val DATABASE_VERSION = 2
-        private val DATABASE_NAME = "EDMTDB.db"
+        private val DATABASE_NAME = "GameDB.db"
         //Table
-        private val TABLE_NAME = "Message"
-        private val COL_ID = "Id"
-        private val COL_MESSAGE = "Info"
-        private val COL_TYPE = "Type"
-        private val COL_KEY = "Key"
+        private val TABLE_NAME = "Players"
+        private val COL_NICK = "Nick"
+        private val COL_PASS = "Password"
+        private val COL_LOGED_IN = "Is loged in"
+        private val COL_BEST_SCORE = "Key"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val CREATE_TABLE_QUERY = ("CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_MESSAGE TEXT, $COL_TYPE TEXT, $COL_KEY TEXT)")
+        val CREATE_TABLE_QUERY = ("CREATE TABLE $TABLE_NAME ($COL_NICK VARCHAR PRIMARY KEY, $COL_PASS VARCHAR, $COL_LOGED_IN CHAR, $COL_BEST_SCORE INTEGER)")
         db!!.execSQL(CREATE_TABLE_QUERY)
     }
 
