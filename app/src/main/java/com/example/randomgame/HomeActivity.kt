@@ -1,6 +1,7 @@
 package com.example.randomgame
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,11 +17,17 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         supportActionBar?.hide()
         val newGameButton = findViewById<Button>(R.id.new_game_button)
+        val rankingButton = findViewById<Button>(R.id.ranking_button_home)
 
         newGame()
 
         newGameButton.setOnClickListener {
             newGame()
+        }
+
+        rankingButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, RankingActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -8,7 +8,9 @@
     <string name="score">Score: 0</string>
     <string name="reset_score">reset score</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="login">Log in/Register</string>
+    <string name="login">Log in</string>
+    <string name="signUp">Sign up</string>
     <string name="nickHint">nick</string>
     <string name="passwordHint">password</string>
+    <string name="ranking">Ranking</string>
 </resources>
