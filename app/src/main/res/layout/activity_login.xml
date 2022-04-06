@@ -16,7 +16,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/nickHint"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
