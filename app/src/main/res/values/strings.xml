@@ -11,4 +11,5 @@
     <string name="login">Log in/Register</string>
     <string name="nickHint">nick</string>
     <string name="passwordHint">password</string>
+    <string name="ranking">Ranking</string>
 </resources>

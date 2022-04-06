@@ -16,11 +16,17 @@ class LoginActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.logIn)
         val nickField = findViewById<EditText>(R.id.nick)
         val passwordField = findViewById<EditText>(R.id.password)
+        val rankingButton = findViewById<Button>(R.id.rankingButton)
 
         loginButton.setOnClickListener {
             val nick = nickField.text.toString()
             val password = passwordField.text.toString()
             val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        rankingButton.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RankingActivity::class.java)
             startActivity(intent)
         }
     }
