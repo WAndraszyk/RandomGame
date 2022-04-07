@@ -36,6 +36,7 @@ class HomeActivity : AppCompatActivity() {
             db.logOut()
             val intent = Intent(this@HomeActivity, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

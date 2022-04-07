@@ -81,10 +81,12 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
     }
 
     fun logOut(){
-        val db: SQLiteDatabase = writableDatabase
-        val query = ("UPDATE $TABLE_NAME SET $COL_LOGGED_IN='N' WHERE $COL_LOGGED_IN='Y'")
-        db.execSQL(query)
-        db.close()
-        Toast.makeText(context, "Wylogowano!", Toast.LENGTH_SHORT).show()
+        if (isLoggedIn()){
+            val db: SQLiteDatabase = writableDatabase
+            val query = ("UPDATE $TABLE_NAME SET $COL_LOGGED_IN='N' WHERE $COL_LOGGED_IN='Y'")
+            db.execSQL(query)
+            db.close()
+            Toast.makeText(context, "Wylogowano!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
