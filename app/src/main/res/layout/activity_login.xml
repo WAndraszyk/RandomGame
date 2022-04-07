@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/logIn"
-        android:layout_width="166dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="123dp"
         android:layout_marginTop="48dp"
@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/signUp"
-        android:layout_width="166dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="123dp"
         android:layout_marginTop="112dp"
@@ -65,7 +65,7 @@
 
     <Button
         android:id="@+id/rankingButton"
-        android:layout_width="165dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="123dp"
         android:layout_marginTop="176dp"

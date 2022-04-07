@@ -57,7 +57,15 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        val db = DBHelper(this@LoginActivity)
+        db.logOut()
+    }
+
     override fun onStop() {
         super.onStop()
     }
+
+
 }

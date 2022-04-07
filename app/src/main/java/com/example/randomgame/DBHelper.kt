@@ -4,8 +4,10 @@ import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper
+import android.widget.Toast
 
 class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    val context = context
     companion object {
         private const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "GameDB.db"
@@ -83,5 +85,6 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         val query = ("UPDATE $TABLE_NAME SET $COL_LOGGED_IN='N' WHERE $COL_LOGGED_IN='Y'")
         db.execSQL(query)
         db.close()
+        Toast.makeText(context, "Wylogowano!", Toast.LENGTH_SHORT).show()
     }
 }
