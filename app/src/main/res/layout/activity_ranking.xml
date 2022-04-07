@@ -17,6 +17,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:minHeight="50dp"
             android:orientation="vertical">
 
@@ -26,7 +28,9 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:gravity="center"
-                android:padding="10sp" />
+                android:padding="10sp"
+                android:textColor="#673AB7"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/wynik1"
@@ -34,206 +38,11 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:gravity="center"
-                android:padding="10sp" />
+                android:padding="10sp"
+                android:textColor="#673AB7"
+                android:textSize="24sp" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:minHeight="50dp">
-
-            <TextView
-                android:id="@+id/nick10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:gravity="center"
-                android:padding="10sp" />
-
-            <TextView
-                android:id="@+id/wynik10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10sp" />
-        </TableRow>
     </TableLayout>
 
     <TextView
@@ -246,7 +55,7 @@
         android:layout_marginBottom="23dp"
         android:fontFamily="casual"
         android:padding="10sp"
-        android:text="BEST SCORES"
+        android:text="@string/best_scores"
         android:textColor="#673AB7"
         android:textSize="34sp"
         android:textStyle="bold"

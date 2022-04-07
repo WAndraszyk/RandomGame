@@ -105,4 +105,23 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         cursor.moveToFirst()
         return cursor.getInt(0)
     }
+
+    fun loadRanking(): Array<MutableList<out Any>> {
+        val players = mutableListOf<String>()
+        val scores = mutableListOf<Int>()
+        val selectQuery = ("SELECT $COL_NICK, $COL_SCORE FROM $TABLE_NAME ORDER BY $COL_SCORE DESC LIMIT 10")
+        val db = this.writableDatabase
+        val cursor =  db.rawQuery(selectQuery, null)
+        if(cursor.moveToFirst()){
+            do {
+                val player = cursor.getString(0)
+                val score = cursor.getInt(1)
+
+                players.add(player)
+                scores.add(score)
+            } while (cursor.moveToNext())
+        }
+        db.close()
+        return arrayOf(players, scores)
+    }
 }
