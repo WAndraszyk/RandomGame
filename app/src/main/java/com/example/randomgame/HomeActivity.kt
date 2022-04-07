@@ -43,6 +43,10 @@ class HomeActivity : AppCompatActivity() {
     private fun newGame() {
         generateAnswer()
         setGuesses(0)
+        game()
+    }
+
+    private fun game() {
         val db = DBHelper(this@HomeActivity)
 
         val guessButton = findViewById<Button>(R.id.guess_button)
@@ -64,7 +68,7 @@ class HomeActivity : AppCompatActivity() {
 
         guessButton.setOnClickListener {
             if (getGuesses() < 10){
-                when(game(getAnswer())){
+                when(makeGuess(getAnswer())){
                     0 -> {
                         Toast.makeText(applicationContext, "Twoja liczba jest mniejsza", Toast.LENGTH_SHORT).show()
                         setGuesses(getGuesses()+1)
@@ -98,7 +102,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun game(answer : Int): Int {
+    private fun makeGuess(answer : Int): Int {
         val guess = findViewById<EditText>(R.id.editTextNumber)
         if (guess.length() > 0 ) {
             val string = guess.text.toString()
@@ -149,5 +153,15 @@ class HomeActivity : AppCompatActivity() {
     private fun getAnswer(): Int {
         val sharedScore = this.getSharedPreferences("com.example.randomgame.shared", 0)
         return sharedScore.getInt("answer", 0)
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        game()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        game()
     }
 }
