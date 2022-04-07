@@ -6,4 +6,252 @@
     android:layout_height="match_parent"
     tools:context=".RankingActivity">
 
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="641dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nick1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:minHeight="50dp">
+
+            <TextView
+                android:id="@+id/nick10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:gravity="center"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/wynik10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/ranking_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="casual"
+        android:padding="10sp"
+        android:text="BEST SCORES"
+        android:textColor="#673AB7"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
