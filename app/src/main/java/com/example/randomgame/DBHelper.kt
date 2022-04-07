@@ -1,5 +1,6 @@
 package com.example.randomgame
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import android.content.Context
@@ -88,5 +89,20 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
             db.close()
             Toast.makeText(context, "Wylogowano!", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun setScore(value: Int){
+        val db: SQLiteDatabase = writableDatabase
+        val query = ("UPDATE $TABLE_NAME SET $COL_SCORE=$COL_SCORE + $value WHERE $COL_LOGGED_IN='Y'")
+        db.execSQL(query)
+        db.close()
+    }
+
+    fun getScore(): Int{
+        val db: SQLiteDatabase = writableDatabase
+        val query = ("SELECT $COL_SCORE FROM $TABLE_NAME WHERE $COL_LOGGED_IN='Y'")
+        val cursor = db.rawQuery(query,null)
+        cursor.moveToFirst()
+        return cursor.getInt(0)
     }
 }

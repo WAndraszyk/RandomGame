@@ -43,11 +43,12 @@ class HomeActivity : AppCompatActivity() {
     private fun newGame() {
         generateAnswer()
         setGuesses(0)
+        val db = DBHelper(this@HomeActivity)
 
         val guessButton = findViewById<Button>(R.id.guess_button)
         val guessNr = findViewById<TextView>(R.id.guessesView)
         val scoreView = findViewById<TextView>(R.id.scoreView)
-        scoreView.setText("Score: " + getScore().toString())
+        scoreView.setText("Score: " + db.getScore().toString())
         guessNr.setText("Guesses so far: " + getGuesses().toString())
 
         val builder = AlertDialog.Builder(this@HomeActivity)
@@ -65,27 +66,27 @@ class HomeActivity : AppCompatActivity() {
             if (getGuesses() < 10){
                 when(game(getAnswer())){
                     0 -> {
-                        Toast.makeText(applicationContext, "Twoja liczba jest mniejsza", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Twoja liczba jest mniejsza", Toast.LENGTH_SHORT).show()
                         setGuesses(getGuesses()+1)
                     }
                     1 -> {
-                        Toast.makeText(applicationContext, "Twoja liczba jest wieksza", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Twoja liczba jest wieksza", Toast.LENGTH_SHORT).show()
                         setGuesses(getGuesses()+1)
                     }
                     2 -> {
                         setGuesses(getGuesses()+1)
                         dialog.show()
                         when(getGuesses()){
-                            1 -> setScore(getScore()+5)
-                            in 2..4 -> setScore(getScore()+3)
-                            in 5..6 -> setScore(getScore()+2)
-                            in 7..10 -> setScore(getScore()+1)
+                            1 -> db.setScore(5)
+                            in 2..4 -> db.setScore(3)
+                            in 5..6 -> db.setScore(2)
+                            in 7..10 -> db.setScore(1)
                         }
                         generateAnswer()
                         setGuesses(0)
-                        scoreView.setText("Score: " + getScore().toString())
+                        scoreView.setText("Score: " + db.getScore().toString())
                     }
-                    -1 -> Toast.makeText(applicationContext, "Twoja liczba jest spoza zakresu 0-20!", Toast.LENGTH_LONG).show()
+                    -1 -> Toast.makeText(applicationContext, "Twoja liczba jest spoza zakresu 0-20!", Toast.LENGTH_SHORT).show()
                 }
             }
             else{
@@ -123,18 +124,6 @@ class HomeActivity : AppCompatActivity() {
         else{
             return -1
         }
-    }
-
-    private fun setScore(value: Int){
-        val sharedScore = this.getSharedPreferences("com.example.randomgame.shared",0)
-        val edit = sharedScore.edit()
-        edit.putInt("score", value)
-        edit.apply()
-    }
-
-    private fun getScore(): Int {
-        val sharedScore = this.getSharedPreferences("com.example.randomgame.shared", 0)
-        return sharedScore.getInt("score", 0)
     }
 
     private fun setGuesses(value: Int){
