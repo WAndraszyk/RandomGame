@@ -18,6 +18,8 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.hide()
         val newGameButton = findViewById<Button>(R.id.new_game_button)
         val rankingButton = findViewById<Button>(R.id.ranking_button_home)
+        val logOutButton = findViewById<Button>(R.id.log_out_button)
+        val db = DBHelper(this@HomeActivity)
 
         newGame()
 
@@ -27,6 +29,12 @@ class HomeActivity : AppCompatActivity() {
 
         rankingButton.setOnClickListener {
             val intent = Intent(this@HomeActivity, RankingActivity::class.java)
+            startActivity(intent)
+        }
+
+        logOutButton.setOnClickListener {
+            db.logOut()
+            val intent = Intent(this@HomeActivity, LoginActivity::class.java)
             startActivity(intent)
         }
     }

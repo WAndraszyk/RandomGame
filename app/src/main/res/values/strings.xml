@@ -13,4 +13,5 @@
     <string name="nickHint">nick</string>
     <string name="passwordHint">password</string>
     <string name="ranking">Ranking</string>
+    <string name="log_out">Log out</string>
 </resources>

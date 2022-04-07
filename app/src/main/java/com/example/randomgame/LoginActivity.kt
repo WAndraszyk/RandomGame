@@ -12,6 +12,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
+        val db = DBHelper(this@LoginActivity)
 
         val loginButton = findViewById<Button>(R.id.logIn)
         val signUpButton = findViewById<Button>(R.id.signUp)
@@ -22,15 +23,32 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             val nick = nickField.text.toString()
             val password = passwordField.text.toString()
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-            startActivity(intent)
+            if(nick.isNotEmpty() && password.isNotEmpty()) {
+                if (db.logIn(nick, password)) {
+                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(applicationContext, "Błędne dane logowania!", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }else{
+                Toast.makeText(applicationContext, "Wpisz prawidłowy nick i hasło!", Toast.LENGTH_SHORT).show()
+            }
         }
 
         signUpButton.setOnClickListener {
             val nick = nickField.text.toString()
             val password = passwordField.text.toString()
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-            startActivity(intent)
+            if(nick.isNotEmpty() && password.isNotEmpty()){
+                if(db.signUp(nick, password)){
+                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(applicationContext, "Użytkownik o takim nicku już istnieje!", Toast.LENGTH_SHORT).show()
+                }
+            }else{
+                Toast.makeText(applicationContext, "Wpisz prawidłowy nick i hasło!", Toast.LENGTH_SHORT).show()
+            }
         }
 
         rankingButton.setOnClickListener {
@@ -41,6 +59,5 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        Toast.makeText(applicationContext, "LoginActivity on stop", Toast.LENGTH_LONG).show()
     }
 }

@@ -13,11 +13,18 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         supportActionBar?.hide()
+        val db = DBHelper(this@SplashScreen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashScreen, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            if(db.isLoggedIn()) {
+                val intent = Intent(this@SplashScreen, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else{
+                val intent= Intent(this@SplashScreen, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }, 3000)
     }
 }
