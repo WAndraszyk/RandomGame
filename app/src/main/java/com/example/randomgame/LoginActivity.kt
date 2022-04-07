@@ -59,6 +59,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
+        val nickField = findViewById<EditText>(R.id.nick)
+        val passwordField = findViewById<EditText>(R.id.password)
+        nickField.text.clear()
+        passwordField.text.clear()
         val db = DBHelper(this@LoginActivity)
         db.logOut()
     }
