@@ -7,6 +7,7 @@
     tools:context=".LoginActivity">
 
     <EditText
+        android:maxLength="20"
         android:id="@+id/nick"
         android:layout_width="0dp"
         android:layout_height="49dp"
@@ -23,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:maxLength="20"
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="48dp"

@@ -2,6 +2,7 @@ package com.example.randomgame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class RankingActivity : AppCompatActivity() {
@@ -10,6 +11,7 @@ class RankingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ranking)
         supportActionBar?.hide()
         val db = DBHelper(this@RankingActivity)
+        val backButton = findViewById<Button>(R.id.back_button)
 
         val nicksView = findViewById<TextView>(R.id.nick1)
         val scoresView = findViewById<TextView>(R.id.wynik1)
@@ -28,5 +30,9 @@ class RankingActivity : AppCompatActivity() {
         }
         nicksView.setText(nicks)
         scoresView.setText(scores)
+
+        backButton.setOnClickListener {
+            finish()
+        }
     }
 }
